@@ -1,0 +1,57 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Face.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        <Grid x:Name="gPhoto">
+        <Button Content="Take Photo" Height="72" HorizontalAlignment="Left"
+Margin="12,6,0,0" Name="takePhotoButton" VerticalAlignment="Top"
+Width="189" Click="takePhotoButton_Click" />
+        <Image Height="308" HorizontalAlignment="Left" Margin="27,275,0,0"
+Name="myImage" Stretch="Fill" VerticalAlignment="Top"
+Width="406"/>
+        <Button Content="Choose Existing" Height="72" HorizontalAlignment="Left"
+Margin="194,6,0,0" Name="choosePhotoButton" VerticalAlignment="Top"
+Width="239" Click="choosePhotoButton_Click" />
+        <TextBlock Height="30" HorizontalAlignment="Left" Margin="27,162,0,0"
+Name="textBlock1" Text="Disconnect phone from Zune software to run!"
+VerticalAlignment="Top" Width="406" />
+        <Button Content="Save Current Photo to Library" Height="72"
+HorizontalAlignment="Left" Margin="12,84,0,0" Name="savePhotoButton"
+VerticalAlignment="Top" Width="419" IsEnabled="False"
+Click="savePhotoButton_Click" />
+        <TextBlock Height="71" HorizontalAlignment="Left" Margin="29,197,0,0"
+Name="statusText" Text="" VerticalAlignment="Top" Width="402"
+Foreground="Red" TextWrapping="Wrap" />
+        <TextBox Height="72" HorizontalAlignment="Left" Margin="33,630,0,0" Name="textBox1" Text="TextBox" VerticalAlignment="Top" Width="335" />
+        <Button Content="Button" Height="72" HorizontalAlignment="Left" Margin="29,676,0,0" Name="button1" VerticalAlignment="Top" Width="160" Click="button1_Click" />
+        </Grid>
+        <Grid x:Name="gInfo"  Visibility="Collapsed">
+            <TextBlock Height="302" HorizontalAlignment="Left" Margin="58,152,0,0" Name="txtInfo" Text="TextBlock" VerticalAlignment="Top" Width="345" />
+        </Grid>
+    </Grid>
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>
